@@ -2,7 +2,7 @@
 
 ## Curso de JavaScript para back-end
 
-### Back-end incluso
+### Back-end incluso no curso
 * Node.JS
 * MariaDB
 * MySQL Workbench
