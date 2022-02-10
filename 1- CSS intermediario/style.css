@@ -23,12 +23,13 @@ div{
 /* ###### LINKS ANCORA ###### */
 header.GuiaDeAncora{
     background: #a0ecd0c7;    
-    font-size: 2rem;
+    font-size: 2rem;    
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
 }
 a{
+    /*  */
     color: antiquewhite;
     text-decoration: none;
     background: rgba(128, 128, 128, 0.363);
@@ -38,12 +39,17 @@ a{
 }
 a:hover{
     transform: scale(1.2);
-    transition: 0.4s;
-    font-weight: 600;
+    transition: 0.1s;
+    font-weight: 800;
+    color: #7B886B;
+    
+    
 }
 a.back{
+    font-size: 1.9rem;
     position: relative;
     top: 4.5em; left: 70%;
+    border: 1px antiquewhite  solid;
 }
 /* ###### FIM -LINKS ANCORA ###### */
 
