@@ -1,6 +1,6 @@
-# Node.JS-Curso
 
-## Curso de JavaScript para back-end
+
+# Curso de JavaScript para back-end
 
 ### Back-end incluso no curso
 * Node.JS
