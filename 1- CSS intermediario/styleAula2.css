@@ -3,7 +3,18 @@
     padding: 0px;
 }
 
- html{
-    font-size: 62.5%;
- }
- 
+.filha1, .filha2{
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    background: blueviolet;
+    position: static;
+}
+.filha2{
+background-color: rgb(44, 6, 6);
+}
+.filha1{
+    position: absolute;
+    top:  50px;
+    left: 80px;
+}

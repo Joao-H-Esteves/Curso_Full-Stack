@@ -12,11 +12,12 @@ html{
 }
 div{    
     /* max-width: 200vh; */
-    height: 100vh;    /* podemos fazer guia do tamanho da tela do usuario */
+    height: 100vh;    
+    /* podemos fazer guia do tamanho da tela do usuario */
     font-size: 3rem;
     margin: auto;
     padding: 4%;
-    
+    overflow:auto;
 }
 
 
@@ -47,13 +48,25 @@ a:hover{
 }
 a.back{
     font-size: 1.9rem;
+    float: right;
     position: relative;
-    top: 4.5em; left: 70%;
+    top: -15%; 
     border: 1px antiquewhite  solid;
 }
 /* ###### FIM -LINKS ANCORA ###### */
 
-
+.image{
+    
+    align-items: center;
+    background: #1a1d1763;
+    height: 40vh;
+    max-height: 230px;
+    width: 40vw;
+    max-width:230px ;
+    border-radius: 200px;
+    box-shadow: 2px 2px 50px white;
+    
+}
 
 .linha1{
     background: #A0ECD0;
@@ -79,6 +92,7 @@ p{
     padding: 2rem;
     text-align:justify ;
     font-size: 2.2rem;
+    float: inline-start;
 }
 
 h1,h2{
@@ -86,7 +100,7 @@ h1,h2{
     padding: 5px 9px;
     border-radius: 20px;
     width: 30vw;
-    max-width: 20.0rem;
-    min-width: 15rem;
+    max-width: 50rem;
+    min-width: 30rem;
     text-align: center;
 }
