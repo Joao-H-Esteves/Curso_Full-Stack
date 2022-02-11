@@ -12,9 +12,22 @@
 }
 .filha2{
 background-color: rgb(44, 6, 6);
+position: relative;
+z-index: 2;
 }
 .filha1{
     position: absolute;
-    top:  50px;
+    top:  250px;
     left: 80px;
+    z-index: 1;
+}
+ul {
+    margin-top: 80px;
+    height: 200px;
+    overflow-y: auto;
+}
+.stick{
+    background: gray;
+    position: sticky;
+    top: 0px;
 }
