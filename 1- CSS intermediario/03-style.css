@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grids{
+    padding: 15px;
+}
+.grids::after{
+    content: "";
+    display: block;
+    clear: both;
+
+/*FAZER COM QUE AS GRIDS FUNCIONEM E NÃO SUBA NENHUM ELEMENTO AO LADO DELAS*/
+}
+.quadrado{
+   box-sizing: border-box;
+    width: 33.33%;
+    height: 300px;
+    float: left;
+    padding: 8px;
+    /* PARA O CONTEUDO NÃO DERRUBAR AS CAIXAS (FICANDO SÓ DUAS NA MESMA LINHA) FIZEMOS DESSA FORMA E DIVIDIMOS A DIV COM MAIS UMA DIV INTERNA */
+}
+.conteudo{
+    background: blue;
+    width: 100%;
+    height: 100%;
+    margin: 1px;
+
+}
+
+/* PARA MOBILE */
+
+@media all and (max-width: 440px){
+    .quadrado{
+    width: 100%;
+    }
+}
+@media all and (min-width: 441px) and (max-width: 768px){
+    .quadrado{
+    width: 50%;
+    }
+}
+@media all and (min-width: 1024px) {
+    .quadrado{
+    width: 25%;
+    }
+}
