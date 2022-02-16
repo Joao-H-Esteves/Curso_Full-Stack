@@ -16,8 +16,10 @@ header{
 
     /* Para alinhar os 3 botões */
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    
 }
 ul{
     display: block;

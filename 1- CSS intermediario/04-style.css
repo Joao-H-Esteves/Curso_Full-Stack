@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container{
+    background: rgba(0, 0, 0, 0.774);
+    height: 500px;
+
+    /* No flex quem ganha mobilidade são os filhos */
+    display: flex;
+
+    /* itens que podem ser mexidos: */
+    flex-direction: row ;
+                    /* column = viram linhas (eixo cross)
+                       row = viram colunas (eixo main axis) */
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-item{
+    background: goldenrod;
+    margin: 2px;
+    padding: 5px;
+    width: 300px;
+}
+.flex-item:nth-child(3){
+    font-size: 50px;
+}
