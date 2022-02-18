@@ -35,7 +35,7 @@
 .letra{
     /* background: white; */
     flex-basis: 30%;
-    font: 100px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: 100px 'Dancing Script', cursive;
     text-align: center;
     color: goldenrod;
     display:flex;
