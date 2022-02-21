@@ -5,9 +5,10 @@
 html{
     font:40px 'Dancing Script', cursive;
     background-color: rgba(0, 0, 0, 0.678);   
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 .grid{
+    box-sizing: border-box;
     max-width: 1200px;
     display: grid;
 
@@ -16,7 +17,7 @@ html{
 
     FR= FRAGMENTO VAI PEGAR OQ SOBRAR DA TELA USANDO RESPONSIVIDADE */
 
-    gap: 30px;
+    gap: 30px 90px;
    /* ESPAÇAMENTO ENTRE AS GRIDS */
 
    margin: 0 auto;
@@ -31,9 +32,43 @@ html{
 
 .grid2 {
     
+    background: none;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    grid-template-columns: 
+    [UM] 1fr [DOIS] 2fr [TRES] 1fr [QUATRO];
+    /* PODEMOS NOMEAR AS LINHAS E COLUNAS  */
+    grid-template-rows:[A] 1fr [B] 2fr [C];
+    gap: 30px;
     margin: 20px auto;
     
+}
+.grid2 .image{
+    color:rgb(100, 102, 9);
+    border: 10px inset rgb(100, 102, 9);
+    background: rgb(12, 54, 12);
+
+}
+
+.grid2 :nth-child(11){
+    background-color: green;
+    color: aliceblue;
+    align-self: stretch;
+    text-align: center;
+  
+
+    /* podemos usar essas duas sintaxes */
+    grid-column-start: UM;
+    grid-column-end: QUATRO;
+
+    grid-row: span 4 / 6;
+
+}
+.grid2 :nth-child(20){
+    background-color: rgb(105, 128, 0);
+    color: aliceblue;
+    text-align: center;
+    grid-area: 10 / 2 / 12 /4;
+    /* Inicia na linha 10 e finaliza na 12
+                Coluna 2 e finaliza na 4
+    */
 }

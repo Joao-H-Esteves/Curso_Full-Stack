@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+html{    
+    background: greenyellow;
+}
+.grades{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    gap: 30px;    
+    margin: 0 auto;
+    max-width: 1400px;
+    overflow-x: hidden;
+}
+.filho{    
+    box-sizing: border-box;
+    background: black;
+    color: greenyellow;
+    height: 10vh;
+    padding-top: 0.9em;
+    text-align: center;
+    font: 20px arial;
+    text-shadow: 1px 1px 10px rgb(236, 229, 229);
+}
+
+.grades :nth-child(12){
+    box-sizing: border-box;
+    background-color: rgb(7, 230, 81);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    height: auto;
+    width: auto;
+    max-height: 400px;
+    padding: auto;
+    font-size: 6vw;
+}
+.grades :nth-child(23){
+    grid-column: span 5;
+    max-width: 2000px;
+    
+}

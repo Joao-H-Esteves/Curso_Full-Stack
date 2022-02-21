@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+html{
+    background: #90A9B7;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+div{
+    margin: 10px;
+    padding: 10px;
+}
+.princ{
+    background: #CCF5AC;
+    width: calc (40% - 20px);
+}
+.meio{
+    background: #272727;
+    color: #CCF5AC;
+    width: 30%;
+}
+
+h1{
+    color: #DF2935;
+    text-align: center;
+    text-shadow: 2px -2px 5px #CCF5AC;
+    margin: 20px;
+}
+h2{
+    color: #ffffff;
+    text-shadow: 2px -2px 5px #272727;
+    font-weight: 100;
+    text-align: center;
+}
