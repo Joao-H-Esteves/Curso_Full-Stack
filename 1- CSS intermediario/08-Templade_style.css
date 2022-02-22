@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body{
+    font:48px sans-serif;
+    color: white;
+}
+.templade{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.rodape{
+    text-align: center;
+    
+}
+a , p , h2{
+    text-decoration: none;
+    margin: 2px 20px;
+    color: #0F0F0F!important;
+}
+li{
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px;
+}
+h2{
+    text-shadow: -2px 2px 15px#E7E247;
+}
+/* ######### MONTANDO AS GRIDS ######### */
+.Grid{
+    display: grid;
+    grid-template-rows: AUTO 1fr auto;
+    /* estrutura do site:
+    cabeçalho               150px deixei AUTO para responsividade
+    navegação e conteudo    1fr
+    rodape                  50px  deixei AUTO para responsividade
+    */
+    grid-template-columns: 200px 1fr ;
+    /* duas colunas por causa do navegação e conteudo */
+
+    /* CRIANDO O TEMPLATE ACIMA  com nomes*/
+    grid-template-areas: 
+        'header header'
+        'nav conteudo'
+        'rodape rodape'
+    ;
+}
+ .cabecalho{ /*podemos tanto usar a class */
+    grid-area: header;
+    background-color: #E7E247;
+    color: #0F0F0F;
+    text-shadow: -3px 4px 5px #ffffff;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 10px;
+
+ }   
+.Grid div:nth-child(2){ /* Ou usar a pseudo-classe */
+    grid-area: nav;
+    background-color: #7C5869;
+    border-right: 10px solid #E7E247;
+    
+}
+.Grid div:nth-child(3){
+    grid-area: conteudo;
+    background-color: #F6F0ED;
+}
+.Grid div:nth-child(4){
+    grid-area: rodape;
+    background: #7C5869;
+    border-top: 10px solid #E7E247;
+    
+}
+
+/* RESPONSIVIDADE */
+@media all and (max-width: 720px){
+    .Grid{
+    
+        grid-template-columns:  1fr ;
+        /* duas colunas por causa do navegação e conteudo */
+    
+        /* CRIANDO O TEMPLATE ACIMA */
+        grid-template-areas: 
+            'header '
+            'nav '
+            'conteudo'
+            'rodape '
+        ;
+        height: auto;
+        overflow-x: hidden;
+        
+    }
+    .cabecalho{
+        font-size: 60%;
+    }
+    .conteudo{
+        /* height: 100%; */
+        display: inline;
+        text-align: justify;
+        letter-spacing: 2px;
+    }
+}
