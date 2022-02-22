@@ -15,7 +15,9 @@ body{
     margin: 0 auto;
 }
 .rodape{
+    padding: 20px 0px;
     text-align: center;
+    font-size: 30px;
     
 }
 a , p , h2{
@@ -28,8 +30,11 @@ li{
     text-align: center;
     margin-top: 10px;
 }
-h2{
-    text-shadow: -2px 2px 15px#E7E247;
+h3{
+    font-size: 40px;
+}
+a{
+    font-size: 40px;
 }
 /* ######### MONTANDO AS GRIDS ######### */
 .Grid{
@@ -80,6 +85,7 @@ h2{
 
 /* RESPONSIVIDADE */
 @media all and (max-width: 720px){
+    
     .Grid{
     
         grid-template-columns:  1fr ;
@@ -104,5 +110,9 @@ h2{
         display: inline;
         text-align: justify;
         letter-spacing: 2px;
+        font-size: 29px;
+    }
+    .Grid div:nth-child(2){        
+        border: 10px solid #E7E247;        
     }
 }

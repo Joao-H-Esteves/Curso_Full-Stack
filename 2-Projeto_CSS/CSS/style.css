@@ -1,0 +1,126 @@
+:root {
+    /* CRIANDO VARIAVEIS GLOBAIS */
+    --primary-color: rgba(0, 0, 0, 0.767);
+
+    --secundary-color: rgb(253, 253, 253);
+                text-shadow: 2px 1px black;
+    --light-gray-color:#e4e4e4;
+
+    --kawasaki-color: #85B442;
+
+    --gap: 3rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* padronizar a responsividade */
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+       
+}
+
+/* ESTRUTURA */
+    .main-fundo{
+        /* plano de fundo */
+        background-image: url('../imagens/poligono-fundo1.svg');
+        background-size: cover;
+        background-position: center ;
+        color: var(--secundary-color);
+        padding-top: 6.6rem;
+    }
+    .sessao{
+        min-height: 100vh;
+        padding-top: 6.6rem;
+    }
+    .main-conteudo{
+        max-width: 120rem;
+        margin: 0 auto;
+        
+    }
+    .caixa-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+/* BARRA DE MENU ASIDE */
+    .menu{
+        background-color: var(--secundary-color);
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        width: 100%;
+        border-bottom:2px solid var(--kawasaki-color);     
+        
+    }
+    .menu h1{
+        font-size: 2.3rem;
+    }
+    .top-bar a{
+        text-decoration: none;
+        color: var(--kawasaki-color);
+        text-shadow: 1px 1px ;
+        position: relative;
+    }
+        /* EFEITO DE TRANSIÇÃO */
+            .top-bar a::after{
+                content: "";
+                position: absolute;
+                top: 2.5rem; left: 50%;
+                width: 0;
+                height: 0.2rem;
+                background-color: var(--kawasaki-color);
+                transition: all 300ms ease-in-out;
+            }
+            .top-bar a:hover::after{
+                width: 100%;
+                left: 0%;
+            }
+            
+
+    .top-bar ul{
+        
+        list-style: none;
+        
+    }
+    .top-bar li{
+        display: inline;
+        margin: 1rem 0.5rem;
+       
+    }
+
+/* FOTOE E IMAGENS */
+    .logo{
+        width: 6rem;
+        
+    }
+
+
+/* Fontes e textos */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+    }
+    h1{
+        font-size: 6rem;
+        text-transform: uppercase;
+    }
+    h2{
+        font-size: 5.5rem;
+    }
+    h3{
+        font-size: 5rem;
+    }
+    h4{
+        font-size: 4.5rem;
+    }
+    h5{
+        font-size: 4rem;
+    }
+    h6{
+        font-size: 3.5rem;
+    }
+    
