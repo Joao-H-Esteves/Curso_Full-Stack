@@ -123,4 +123,6 @@ body{
     h6{
         font-size: 3.5rem;
     }
-    
+    p{
+        text-indent: 5rem;
+    }
