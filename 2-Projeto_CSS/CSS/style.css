@@ -9,10 +9,13 @@
     --kawasaki-color: #85B442;
 
     --gap: 3rem;
+
+    --espaco-do-menu: 5.6rem;
 }
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth; 
 }
 html{
     /* padronizar a responsividade */
@@ -31,11 +34,14 @@ body{
         background-size: cover;
         background-position: center ;
         color: var(--secundary-color);
-        padding-top: 6.6rem;
+        padding-top: var(--espaco-do-menu);
+    }
+    .main-fundo-branco{
+        text-shadow: none;
     }
     .sessao{
         min-height: 100vh;
-        padding-top: 6.6rem;
+        padding-top: var(--espaco-do-menu);
     }
     .main-conteudo{
         max-width: 120rem;
@@ -46,6 +52,19 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .grid-display{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: stretch;
+        gap: var(--gap);
+        height: 100vh;
+    }
+    .text-content{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
     }
 
 /* BARRA DE MENU ASIDE */
@@ -95,8 +114,11 @@ body{
 
 /* FOTOE E IMAGENS */
     .logo{
-        width: 6rem;
-        
+        width: 6rem;        
+    }
+    .piloto-inicio{
+        width: 150%;
+        max-width: 40rem;
     }
 
 
