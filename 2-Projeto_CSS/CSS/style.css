@@ -15,6 +15,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-align: center;
     scroll-behavior: smooth; 
 }
 html{
@@ -66,7 +67,10 @@ body{
         height: 100vh;
     }
     .grid-divisorias{
-        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr)); */
+        margin-top: 8rem;
     }
     .text-flex-daddy{
         display: flex;
@@ -82,6 +86,16 @@ body{
     }
     .text-center{
         max-width: 80rem;
+    }
+    .text-right p {
+        text-align: right;
+        text-indent: 0rem;
+        width: 20vw;
+    }
+    .text-left p{
+        text-align: left;
+        text-indent: 0rem;
+        width: 20vw;
     }
 
 /* BARRA DE MENU ASIDE */
@@ -161,9 +175,14 @@ body{
         width: 45rem;
         height: 25rem;
     }
+    #cup .video-center{
+        width: 35rem;
+        margin: 5rem 0;
+
+    }
 
 /* Fontes e textos */
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5 {
         font-family: 'Montserrat', sans-serif;
     }
     h1{
@@ -174,20 +193,20 @@ body{
         font-size: 5.5rem;
         padding: var(--gap);
         text-transform: uppercase;
-        text-align: center;
     }
+    #cup h2{
+        padding: 1rem;
+    }    
     h3{
-        font-size: 5rem;
-    }
-    h4{
-        font-size: 4.5rem;
-    }
-    h5{
         font-size: 4rem;
     }
-    h6{
+    h4{
         font-size: 3.5rem;
     }
+    h5{
+        font-size: 3rem;
+    }
+    
     p{
         margin-bottom: 1rem;
         text-indent: 5rem;
@@ -196,3 +215,4 @@ body{
         letter-spacing: 0.2rem;
         text-align: justify;
     }
+    
