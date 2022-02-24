@@ -20,12 +20,16 @@
 html{
     /* padronizar a responsividade */
     font-size: 62.5%;
+    
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
-       
+    font-size: 1.8rem;
+    /* overflow-y: scroll; */
 }
+/* section{
+    max-width: 100vw;
+} */
 
 /* ESTRUTURA */
     .main-fundo{
@@ -55,16 +59,29 @@ body{
     }
     .grid-display{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.5fr;
         align-items: center;
         justify-content: stretch;
         gap: var(--gap);
         height: 100vh;
     }
-    .text-content{
+    .grid-divisorias{
+        
+    }
+    .text-flex-daddy{
         display: flex;
-        flex-flow: column wrap;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+
+    }
+    .text-content {
+        position: relative;
+        top: -7rem;
+    }
+    .text-center{
+        max-width: 80rem;
     }
 
 /* BARRA DE MENU ASIDE */
@@ -74,7 +91,7 @@ body{
         top: 0; left: 0; right: 0;
         width: 100%;
         border-bottom:2px solid var(--kawasaki-color);     
-        
+         z-index: 1; /*para os elementos passarem por baixo dele */
     }
     .menu h1{
         font-size: 2.3rem;
@@ -116,11 +133,34 @@ body{
     .logo{
         width: 6rem;        
     }
-    .piloto-inicio{
-        width: 150%;
-        max-width: 40rem;
+    .all-image{
+        position: relative;
+        top: -7rem; right: 0;
+        padding-left: 10%;
     }
-
+    .lateral-img{
+        width: 100%;
+        max-width: 60rem;        
+    }
+    .front-eyes{
+        max-width: 40rem;
+        border-radius: 50%;
+       
+    }
+/* VIDEOS */
+    /* .assist-mp4{
+        padding-left: 10%;
+    } */
+    .video-all{
+        width: 45rem;
+        height: auto;
+        border-radius: 4%;
+        margin: 2rem;
+    }
+    .you-t-all{
+        width: 45rem;
+        height: 25rem;
+    }
 
 /* Fontes e textos */
     h1, h2, h3, h4, h5, h6 {
@@ -132,6 +172,9 @@ body{
     }
     h2{
         font-size: 5.5rem;
+        padding: var(--gap);
+        text-transform: uppercase;
+        text-align: center;
     }
     h3{
         font-size: 5rem;
@@ -146,5 +189,10 @@ body{
         font-size: 3.5rem;
     }
     p{
+        margin-bottom: 1rem;
         text-indent: 5rem;
+        padding: 0 var(--gap);
+        line-height: 2.5rem;
+        letter-spacing: 0.2rem;
+        text-align: justify;
     }
