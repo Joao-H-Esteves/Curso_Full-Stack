@@ -10,7 +10,7 @@
 
     --gap: 3rem;
 
-    --espaco-do-menu: 5.6rem;
+    --espaco-do-menu: 6.6rem;
 }
 *{
     margin: 0;
@@ -57,19 +57,21 @@ body{
         justify-content: space-between;
         align-items: center;
     }
+   
     .grid-display{
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         align-items: center;
         justify-content: stretch;
         gap: var(--gap);
-        height: 100vh;
+        min-height: 100vh;
     }
-    .grid-divisorias{
+     
+     .grid-divisorias{ /*guia ninja cup */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        /* grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr)); */
-        margin-top: 8rem;
+        grid-template-columns: auto auto auto;
+        
+        margin:   auto;
     }
     .text-flex-daddy{
         display: flex;
@@ -77,6 +79,7 @@ body{
         justify-content: center;
         align-items: center;
         flex-flow: column wrap;
+        margin: 0 auto;
 
     }
     .text-content {
@@ -171,23 +174,19 @@ body{
        
     }
 /* VIDEOS */
-    /* .assist-mp4{
-        padding-left: 10%;
-    } */
+    
     .video-all{
-        width: 45rem;
-        height: auto;
+        max-width: 45rem;
+        min-width: 25rem;
+        /* height: auto; */
         border-radius: 4%;
         margin: 2rem;
     }
-    .you-t-all{
-        width: 45rem;
-        height: 25rem;
-    }
+ 
     #cup .video-center{
-        width: 35rem;
+        max-width: 35rem;
+        min-height: 15rem;
         margin: 5rem 0;
-
     }
 
 /* Fontes e textos */
