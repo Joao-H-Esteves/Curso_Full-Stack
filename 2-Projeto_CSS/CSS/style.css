@@ -107,7 +107,7 @@ body{
         top: 0; left: 0; right: 0;
         width: 100%;
         border-bottom:2px solid var(--kawasaki-color);     
-         z-index: 1; /*para os elementos passarem por baixo dele */
+         z-index: 2; /*para os elementos passarem por baixo dele */
     }
     .menu h1{
         font-size: 2.3rem;
@@ -175,14 +175,33 @@ body{
     }
 /* VIDEOS */
     
-    .video-all{
-        max-width: 45rem;
-        min-width: 25rem;
-        /* height: auto; */
+    .video-container{
+       position: relative;
+       max-width: 60rem;
+       width: auto;
+       /* background-color: beige; */
+       height: 100vh;
+   }
+   
+    .absolut-mp4{
+        position: absolute;
         border-radius: 4%;
-        margin: 2rem;
+        
     }
- 
+    #curso .video-1 {
+        left: 0; top: 0;
+        max-width: 70%;
+        min-width: 3rem;
+    }
+    #curso .video-2 {
+        /* tamanho original do youtube
+        width="560" height="315" */
+        left: 0; bottom: 0;  
+        width: 30%;
+        min-width: 70%;
+        height: 50%;
+    }
+    
     #cup .video-center{
         max-width: 35rem;
         min-height: 15rem;
