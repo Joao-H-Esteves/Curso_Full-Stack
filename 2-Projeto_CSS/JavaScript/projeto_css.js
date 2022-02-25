@@ -6,10 +6,10 @@ var refrescar = 1; // mudar imagem de 1 em 1 segundo
 imagens[0] = "imagens/moto-eyes.jpg";
 imagens[1] = "imagens/moto-eyes1.jpg";
 // imagens[2] = "endereço terceira imagem";
-//...
+//...erro no link das imagens
 
 function rodarImagens() {
-    document.getElementById('misto').src = imagens[];
+     document.getElementById('misto').src = imagens[]; //erro aqui
    document.images["misto"].src = imagens[nrImagem++];
 
    if (nrImagem >= imagens.length)
@@ -18,4 +18,4 @@ function rodarImagens() {
    setTimeout("rodarImagens()", refrescar * 1000);  
 }
 
-rodarImagens();
+rodarImagens();//não consigo chamar essa função
