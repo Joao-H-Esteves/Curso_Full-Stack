@@ -10,7 +10,7 @@
 
     --gap: 3rem;
 
-    --espaco-do-menu: 6.6rem;
+    --espaco-do-menu: 12.6rem;
 }
 *{
     margin: 0;
@@ -28,25 +28,27 @@ body{
     font-size: 1.8rem;
     /* overflow-y: scroll; */
 }
-/* section{
-    max-width: 100vw;
-} */
+
 
 /* ESTRUTURA */
+    .espacamento-superior{
+        padding-top: var(--espaco-do-menu);
+        margin-top: var(--espaco-do-menu);
+    }
     .main-fundo{
         /* plano de fundo */
         background-image: url('../imagens/poligono-fundo1.svg');
         background-size: cover;
         background-position: center ;
         color: var(--secundary-color);
-        padding-top: var(--espaco-do-menu);
+        
     }
     .main-fundo-branco{
         text-shadow: none;
     }
     .sessao{
         min-height: 100vh;
-        padding-top: var(--espaco-do-menu);
+        
     }
     .main-conteudo{
         max-width: 120rem;
@@ -70,7 +72,7 @@ body{
      .grid-divisorias{ /*guia ninja cup */
         display: grid;
         grid-template-columns: auto auto auto;
-        
+        width: 90vw;
         margin:   auto;
     }
     .text-flex-daddy{
@@ -86,9 +88,7 @@ body{
         position: relative;
         top: -7rem;
     }
-    .text-center{
-        max-width: 80rem;
-    }
+    
     .text-right p , .text-left p{
         padding-top: 2.5rem;
         text-align: right;
@@ -100,12 +100,23 @@ body{
     }
 
 /* TABELAS */
+.tabela-responsiva{
+    background-color: var(--kawasaki-color);
+    border-radius: 50%;
+    margin: -3rem 0 3rem ;
+}
 table{
     display: flexbox;
-    margin: 5rem;
-    background-color: blue;
-    width: 100vw;
+    margin: 3rem 5rem 5rem 5rem;
+    width: 50vw;
     height: 200px;
+      border-collapse: collapse; /*fazer a borda juntar */
+}
+th{
+    border: 0.4rem solid white;
+}
+td{
+    border: 0.2rem solid white;
 }
 
 
@@ -192,17 +203,16 @@ table{
         
     }
     .foto-galeria:hover{
-        
-        transform: translate(-3%, 3%) scale(1.3) rotate(5deg);
         /* fazer a imagem girar e aumentar */
+        transform: translate(-3%, 3%) scale(1.3) rotate(5deg);
     }
 /* VIDEOS */
     
     .video-container{
        position: relative;
-       max-width: 60rem;
+       max-width: 50rem;
+      /* background-color: #85B442; */
        width: auto;
-       /* background-color: beige; */
        height: 100vh;
    }
    
@@ -211,20 +221,21 @@ table{
         border-radius: 4%;
     }
     #curso .video-1 {
-        left: 0; top: 0;
-        max-width: 70%;
+        right: 0; top: 0;
+        max-width: 90%;
         min-width: 3rem;
     }
     #curso .video-2 {
-        left: 0; bottom: 0;  
-        width: 30%;
-        min-width: 70%;
-        height: 50%;
+        right: 0; bottom: 3rem;  
+        width: 40%;
+        min-width: 90%;
+        height: 40%;
     }
-    
+    .video-cup{
+        width: 40vw;
+    }
     #cup .video-center{
-        max-width: 90%;
-        min-width: 3.4rem;
+        max-width: 30vw;
         margin: 5rem 0;
     }
 
@@ -243,9 +254,12 @@ table{
     }
     #cup h2 , h3{
         padding: 2rem;
+        color: var(--kawasaki-color);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
     }    
     h3 , h4{
         font-size: 4rem;
+        
     }
     h4{
         font-size: 3.5rem;
@@ -255,7 +269,10 @@ table{
     }
      h6{  /*tabela cup*/
         font-size: 1.5rem;
-        text-align:left;
+        text-align:center;
+        margin-bottom: 00.5rem;
+        color: var(--secundary-color);
+        text-shadow: 1px 1px 1px rgb(0, 0, 0);
     }
     
     p{
