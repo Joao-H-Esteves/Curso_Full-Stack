@@ -7,7 +7,7 @@ imagens[0] = "imagens/moto-eyes.jpg";
 imagens[1] = "imagens/moto-eyes1.jpeg";
 imagens[2] = "imagens/moto-eyes2.jpeg";
 imagens[3] = "imagens/moto-eyes3.jpeg";
-//...erro no link das imagens
+
 
 function rodarImagens() {
     //  document.getElementById('misto').src = imagens[]; //erro aqui
@@ -19,4 +19,4 @@ function rodarImagens() {
    setTimeout("rodarImagens()", refrescar * 2800);  
 }
 
-rodarImagens();//não consigo chamar essa função
+rodarImagens();
