@@ -25,4 +25,4 @@ if (imc >26.4 && imc <= 27.8) {
     imcResult = 'Está com sobre peso, precisa emagrecer'
 }
 console.log(`O ${primeiroNome} ${ultimoNome} possui ${idade} anos, tem ${alt} m de altura e pesa ${peso} kgs.`)
-console.log(` O senhor ${ultimoNome} possui IMC de ${imc}. ${imcResult}`);
+console.log(` O senhor ${ultimoNome} possui IMC de ${imc.toFixed(3)}. ${imcResult}`);
