@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio html</title>
+</head>
+<body>
+    
+    <script>
+        const nome = prompt("Digite seu nome completo:");
+        window.document.body.innerHTML += `O seu nome é:<strong> ${nome} </strong><br/>`;
+
+        window.document.body.innerHTML += `Seu nome tem ${nome.replace(" ","").length} letras <br/>`; //tirando os espaços do nome para acertar a contagem.
+
+        window.document.body.innerHTML += `A segunda letra do seu nome é: ${nome[1]}<br/>`;
+
+        // como estamos dentro do window, podemos omitir ele:
+        document.body.innerHTML+= `A primeira letra "A" no seu nome esta na posição : ${nome.indexOf('a') + 1} <br/>`; //localizando um elemento em especifico.
+
+        document.body.innerHTML+= `A ultima letra a no seu nome esta no indice ${nome.lastIndexOf('a')} <br/>`; // procurando de tras para frente.
+
+        document.body.innerHTML+= `As ultimas 3 letras do seu nome são ${nome.slice(-3)} <br/>`; // buscando elementos em especificos de tras para frente.
+
+        document.body.innerHTML+= `As palavras do seu nome são ${nome.split(" ")} <br/> `; //quebra a string em um array com o espaço como paramentro de quebra.
+
+        document.body.innerHTML+= `Seu nome com letras maiúsculas : ${nome.toUpperCase()} <br>`;
+
+        document.body.innerHTML+= `Seu nome com letras minúsculas : ${nome.toLowerCase()} <br>`;
+
+
+        console.log (nome);
+    </script>
+</body>
+</html>
