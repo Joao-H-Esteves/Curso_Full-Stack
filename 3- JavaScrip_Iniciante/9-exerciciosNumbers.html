@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio com Numbers</title>
+</head>
+<body>
+    <section>
+        <h1><strong>O seu numero é <span id="local-numero">  </span></strong></h1>
+
+        <div id="texto"> TEXTO</div>
+    </section>
+
+    <script>
+       let num1 = Number (window.prompt ('Digite um numero'));
+        let temp = Number.isNaN(num1); //verificar se é um num valido
+        const textoBase = document.getElementById("texto"); // economizar codigo.
+      console.log (temp);
+      if (temp == true) {
+        window.alert ('DIGITE APENAS NUMEROS');
+        document.body.innerHTML += " NUMERO INVALIDO ";
+      } else{      
+        textoBase.innerHTML += `${num1} <br>`;// trocando texto do span
+        textoBase.innerHTML = ` A raiz quadradra é ${num1 ** 0.5} <br>`;
+        textoBase.innerHTML += `Seu numero é inteiro?  ${Number.isInteger(num1)} <br>`;
+        textoBase.innerHTML += `Arredondando para baixo ${Math.floor(num1)} <br>`;
+        textoBase.innerHTML += `Arredondando para cima ${Math.ceil(num1)} <br>`;
+        textoBase.innerHTML += `Com duas casas decimais ${num1.toFixed(2)} <br>`;
+
+    }
+    </script>
+</body>
+</html>
