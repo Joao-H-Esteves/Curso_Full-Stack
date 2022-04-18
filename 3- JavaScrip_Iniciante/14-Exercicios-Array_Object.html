@@ -59,7 +59,7 @@
                 const peso = form.querySelector('#peso');
                 const altura = form.querySelector('#altura');
 
-               pessoas.push({
+               pessoas.push({ // criando objeto dentro do array
                    nome : nome.value,
                    sobrenome: sobrenome.value,
                    peso: peso.value,
@@ -67,13 +67,14 @@
                });
                console.log(pessoas);
 
+               //Adicionando como resultado :
                resultado.innerHTML += `<p>${ nome.value} , ${ sobrenome.value} , ${ peso.value} , ${ altura.value}</p>`
                     
            };
             form.addEventListener('submit',recebeEventoForm);
             
         }
-        coletarDado()
+        //coletarDado()
     </script>
     
 </body>
