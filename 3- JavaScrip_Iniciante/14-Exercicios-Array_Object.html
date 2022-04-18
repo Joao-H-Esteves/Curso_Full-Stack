@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Objetos e Arrays</title>
+</head>
+<body>
+    <section>
+        <div>
+            <h2>Insira seus dados</h2>
+        </div>
+        <div >
+            <form class="dados-area" action="" method="get">
+                <div class="dados">
+                    <label for="primeiro-nome">Nome: </label><br>
+                    <input type="text" name="primeiro-nome" id="primeiro-nome">
+                </div>
+                <div class="dados">
+                    <label for="sobrenome">Sobrenome: </label><br>
+                    <input type="text" name="sobrenome" id="sobrenome">
+                </div>
+                <div class="dados">
+                    <label for="peso">Peso: </label><br>
+                    <input type="text" name="peso" id="peso">
+                </div>
+                <div class="dados">
+                    <label for="altura">Altura: </label><br>
+                    <input type="text" name="altura" id="altura">
+                </div>
+                <div class="dados">
+                    <button type="submit" onclick="coletarDado()"> Enviar     </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function coletarDado() {
+            // window.alert('Teste');
+            const form = document.querySelector('.dados-area');
+
+            /*
+            PRIMEIRA OPÇÃO DE EVITAR QUE A PAGINA RECARREGUE
+            form.onsubmit = function(evento){
+                //evento para quando o formulario for enviado
+               alert(1); //teste
+               evento.preventDefault();//não atualizar a pagina
+               console.log('Foi enviado com sucesso');
+            };*/
+
+            //SEGUNDA OPÇÃO DE EVITAR QUE A PAGINA RECARREGUE
+           let contador = 1;
+           function recebeEventoForm(evento) {
+               evento.preventDefault();//não atualizar a pagina
+               console.log(`Formulario não enviado ${contador}`);
+              contador++;               
+           }
+            form.addEventListener('submit',recebeEventoForm);
+            
+        }
+        coletarDado()
+    </script>
+    
+</body>
+</html>
