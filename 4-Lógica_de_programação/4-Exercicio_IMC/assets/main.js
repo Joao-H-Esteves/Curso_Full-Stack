@@ -1,4 +1,8 @@
-
+function mudaLinha(x) { // Usa o numero da tr como paramentro (0 a 6)
+    document.getElementsByTagName('tr')[x].style.background = 'blue';
+    document.getElementsByTagName('tr')[x].style.fontSize = '30px';
+    document.getElementsByTagName('tr')[x].style.color = 'white';
+}
 function CalculoIMC() {
         
 const formulario = document.querySelector('.formulario');
@@ -6,7 +10,7 @@ const resultEscrito = document.querySelector('.resul');
 
 const peso = formulario.querySelector('#peso').value;
 const alt = formulario.querySelector('#altura').value;
-
+let diagnostico;
 //calculo do imc
 let imc;
 imc = (peso / Math.pow (alt,2)).toFixed(2);//potenciação
@@ -27,31 +31,34 @@ imc = (peso / Math.pow (alt,2)).toFixed(2);//potenciação
 }
 
 if (imc < 18.5) {
-    document.querySelector('.linha2').style.background = 'blue';
-    document.querySelector('.linha2').style.fontSize = '30px';
-    document.querySelector('.linha2').style.color = 'white';
-    console.log ('Abaixo do peso');
+    mudaLinha(1)
+    diagnostico ='Abaixo do peso';
 
 }else if( imc >= 18.5 && imc <= 24.9){
-    console.log ('Abaixo do peso');
+    mudaLinha(2)
+    diagnostico = 'Peso Normal';
 
 }else if( imc >= 25 && imc <= 29.9){
-    console.log ('Sobrepeso');
+    mudaLinha(3)
+    diagnostico = 'Sobrepeso';
 
 }else if( imc >= 30 && imc <= 34.9){
-    console.log ('Obesidade nivel 1');
+    mudaLinha(4)
+    diagnostico ='Obesidade nivel 1';
 
 }else if( imc >= 35 && imc <= 39.9){
-    console.log ('Obesidade nivel 2');
+    mudaLinha(5)
+    diagnostico = 'Obesidade nivel 2';
 
 }else if( imc >= 40){
-    console.log ('Obesidade nivel 3');
+    mudaLinha(6)
+    diagnostico = 'Obesidade nivel 3';
     
 }    
 
 console.log (peso , alt, imc);
 
-resultEscrito.innerHTML += `Seu IMC é ${imc}`;
+resultEscrito.innerHTML += `Seu IMC é ${imc} , logo esta com ${diagnostico} .`;
 }
 
 // alert('teste');
