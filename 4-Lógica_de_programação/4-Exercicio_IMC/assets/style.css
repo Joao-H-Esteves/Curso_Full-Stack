@@ -5,7 +5,7 @@
 *{
     box-sizing: border-box;
     outline: 0;
-    
+    font-family: sans-serif;
 }
 
 body{
@@ -13,6 +13,9 @@ body{
     padding: 0;
     background: var(--primary_color);
     font-size: 20px;
+}
+.letreiro{
+    text-align: center;
 }
 .container{
     padding: 20px;
@@ -30,6 +33,20 @@ form input, form label, form button{
 #botao{
     width: 100px;
 }
+form input{
+    padding: 10px;
+}
 form input :focus{
     outline: ipx solid var(--primary_color);
+}
+
+table {
+    margin: 40px auto;
+}
+table td{
+    padding: 4px 18px;
+}
+th{
+    text-align: left;
+    padding-left: 19px;
 }

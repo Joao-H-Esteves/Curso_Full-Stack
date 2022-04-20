@@ -11,13 +11,15 @@
 
 <body>
     <section class="container">
-        <h1> Tabela de IMC </h1>
-        <p>Calcule seu indicie de massa corpórea.</p> 
+        <div class="letreiro">            
+            <h1> Tabela de IMC </h1>
+            <p>Calcule seu indicie de massa corpórea.</p> 
+        </div>
 
         <div class="tabela">
             <table>
                 <tr class="linha1">
-                    <th>Peso</th><th>Rersultado</th>
+                    <th>Peso</th><th>Resultado</th>
                 </tr>
                 <tr class="linha2">
                     <td>Menos que 18,5</td><td>Abaixo do peso</td>
@@ -42,16 +44,20 @@
             </table>
         </div>
 
-        <form>
+        <form class="formulario">
             <label for="peso">Peso:</label>
             <input type="number" id="peso">
               
             <label for="altura">Altura:</label>
             <input type="number" id="altura">
               
-            <button id="botao" type="submit"> Enviar</button>
+            <button id="botao" type="submit" onclick="CalculoIMC()"> Enviar</button>
 
         </form>
+
+        <div class="resul">
+            <p>Resultado</p>
+        </div>
 
     </section>
 
