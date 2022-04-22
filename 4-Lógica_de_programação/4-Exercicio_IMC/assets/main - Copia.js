@@ -5,42 +5,40 @@ const inputPeso= formulario.querySelector('#peso');
 const peso = Number(inputPeso.value);
 const alt = Number(inputAlt.value);
 
-let imc = getIMC(peso , alt); // function para calc o imc(linha20)
-
 formulario.addEventListener('submit', function (event) {
     event.preventDefault();
     //impedir o envio do formulario e o refresh.
 });
 
-
-function getIMC(peso, alt) {//calculo do imc;
-    let imc = (peso / Math.pow(alt, 2));//potenciação
+function mudaLinha(x) { // Usa o numero da tr como paramentro (0 a 6)
+    document.getElementsByTagName('tr')[x].style.background = 'blue';
+    document.getElementsByTagName('tr')[x].style.fontSize = '30px';
+    document.getElementsByTagName('tr')[x].style.color = 'white';
+}
+function getIMC() {//calculo do imc;
+    let imc = (peso / Math.pow(alt, 2)).toFixed(2);//potenciação
     
-    return imc.toFixed(2);
+    return imc;
 }
 
-console.log(peso, alt, imc);
-function CalculoIMC(imc, peso , alt) {
-    
+function CalculoIMC(imc) {
+
     let diagnostico;
     
+
+
     if (peso == undefined || peso == "" || peso == NaN) {
-         
-          const inputPeso = document.querySelector('#peso');
-          inputPeso.style.background = 'red';
-          //inputPeso.innerText = 'Digite o peso!'// não funciona
-          resultEscrito.innerHTML += '<p>Erro digite um valor válido para o peso </p>';
-          
-      }
-    
-    
-  
+
+        const inputPeso = document.querySelector('#peso');
+        inputPeso.style.background = 'red';
+        inputPeso.innerText = 'Digite o peso!'// não funciona
+        resultEscrito.innerHTML += '<p>Erro digite um valor válido para o peso </p>';
+    }
     if (alt == undefined || alt == "" || alt == NaN) {
         const inputAlt = document.querySelector('#altura');
         inputAlt.style.background = 'red';
-        //inputAlt.innerHTML = 'Digite a altura!'// não funciona
+        inputAlt.innerHTML = 'Digite o peso!'// não funciona
         resultEscrito.innerHTML += '<p> Erro digite um valor válido para a altura </p>';
-        
     }
 
     if (imc < 18.5) {
@@ -69,6 +67,7 @@ function CalculoIMC(imc, peso , alt) {
 
     }
 
+    console.log(peso, alt, imc);
     console.log(typeof peso);
     console.log(typeof alt);
     console.log(typeof imc);
@@ -76,10 +75,3 @@ function CalculoIMC(imc, peso , alt) {
     resultEscrito.innerHTML += `Seu IMC é ${imc} , logo esta com ${diagnostico} .`;
 }
 
-function mudaLinha(x) { // Usa o numero da tr como paramentro (0 a 6)
-    document.getElementsByTagName('tr')[x].style.background = 'blue';
-    document.getElementsByTagName('tr')[x].style.fontSize = '30px';
-    document.getElementsByTagName('tr')[x].style.color = 'white';
-}
-
-    
