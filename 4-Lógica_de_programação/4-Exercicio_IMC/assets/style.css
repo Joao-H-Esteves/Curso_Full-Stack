@@ -8,13 +8,13 @@
     font-family: sans-serif;
 }
 
-body{
+body, button{
     margin: 0;
     padding: 0;
     background: var(--primary_color);
     font-size: 20px;
 }
-.letreiro{
+.letreiro, .resul{
     text-align: center;
 }
 .container{
@@ -31,13 +31,16 @@ form input, form label, form button{
     margin-bottom: 18px;
 }
 #botao{
-    width: 100px;
+    color: aliceblue;
+    font-weight: 900;
+    margin-top: 38px;
+    
 }
-form input{
+form input, #botao{
     padding: 10px;
 }
 form input :focus{
-    outline: ipx solid var(--primary_color);
+    outline: 10px solid var(--primary_color);
 }
 
 table {
@@ -46,7 +49,7 @@ table {
 table td{
     padding: 4px 18px;
 }
-th{
+th {
     text-align: left;
     padding-left: 19px;
 }
