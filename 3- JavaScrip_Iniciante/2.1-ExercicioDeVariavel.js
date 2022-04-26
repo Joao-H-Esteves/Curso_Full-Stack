@@ -9,8 +9,8 @@ const alt = 1.79;
 const peso = 82;
 let anoAtual= new Date().getFullYear() // ano atual da maquina
 let idade;
-let imc; //= peso /(altura ^2)
-let imcResult
+let imc; //= peso /(altura **2)
+let imcResult;
 
 idade = anoAtual - anoNasc;
 imc = peso / Math.pow (alt,2);//potenciação

@@ -31,7 +31,10 @@ console.log ('Minuto' , escrevendoData.getMinutes());
 console.log ('Segundos' , escrevendoData.getSeconds());
 console.log ('Milisegundos' , escrevendoData.getMilliseconds());
 console.log ('Dia da semana' , escrevendoData.getDay()); //0=Domingo até 6=Sabado
-
+console.log ('Dia da semana função nativa = ' , escrevendoData.toLocaleString('pt-BR', {weekday: 'long'})); //função nativa para semana
+console.log("");
+//----------------------------------------------
+console.log('Função nativa para a data BR = ',escrevendoData.toLocaleDateString());
 console.log("");
 //----------------------------------------------
 function zeroAEsquerda(num) { 
