@@ -11,8 +11,9 @@ body{
     background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
     margin: 0;
     padding: 0;
-    
+    max-height: 100vh;
     font-size: 20px;
+    text-align: center;
 }
 .container1{
     padding: 20px;
@@ -20,10 +21,9 @@ body{
     max-width: 640px;
     margin:  36vh auto;
     border-radius: 10px;
-    text-align: center;
 }
 
-h1, h2{
+h1, h2,p{
     color: rgb(255, 255, 251);
     text-shadow: 3px 3px 8px rgb(40, 56, 70);
 }
