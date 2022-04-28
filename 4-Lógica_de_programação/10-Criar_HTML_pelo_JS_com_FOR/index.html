@@ -17,8 +17,43 @@
 
 
 
-    <script src="./assets/main.js">
-        
+    <script>
+        /*  
+        EXERCICIO = FAZER O ARRAY DE OBJETOS VIRAR TAGS HTML COM SEUS DEVIDOS TEXTOS
+        USANDO : FOR + ATRIB VIA DESESTRUTURAÇÃO
+        */
+
+        //Array de objetos
+        const elementos = [ //Elementos a serem criados
+            { tag: 'p', texto: 'Frase 1' },
+            { tag: 'div', texto: 'Frase 2' },
+            { tag: 'section', texto: 'Frase 3' },
+            { tag: 'footer', texto: 'Frase 4' },
+        ];
+
+
+        //Daqui em diante não da para rodar no node, tem de usar o Console do windows
+
+        // criando  div nova e atribuindo uma class
+        const endHTML = document.querySelector('.container');
+        const div = document.createElement('div');
+        endHTML.appendChild(div);
+        div.innerHTML = 'Testando a div criada pelo JS';
+        //fim
+
+        // const elementsLocal = document.querySelector('.elementsLocal')
+
+        for (i = 0; i < elementos.length; i++) {
+
+            //console.log(elementos[i].tag); //pegando o elemento dentro do objeto
+            let { tag, texto } = elementos[i] //atribuição desestruturando 
+            let novoElement = document.createElement(tag);
+            endHTML.appendChild(novoElement);
+            novoElement.innerHTML = texto;
+
+            console.log(tag, texto); // para testar o console do windows
+
+        }
     </script>
 </body>
 
