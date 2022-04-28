@@ -5,8 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
     <title>Exercicio 10</title>
+    <style>
+        :root{
+    --primary_color:rgb(41, 59, 75);
+}
+*{
+    box-sizing: border-box;
+    outline: 0;
+    color: var(--primary_color);
+    }
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary_color);
+    font-size: 20px;
+}
+.container{
+    padding: 20px;
+    background: white;
+    max-width: 640px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+    </style>
 </head>
 
 <body>
@@ -38,21 +60,19 @@
         const endHTML = document.querySelector('.container');
         const div = document.createElement('div');
         endHTML.appendChild(div);
-        div.innerHTML = 'Testando a div criada pelo JS';
+        div.innerText = 'Testando a div criada pelo JS';
+        div.style.fontSize = '28px';
         //fim
-
-        // const elementsLocal = document.querySelector('.elementsLocal')
 
         for (i = 0; i < elementos.length; i++) {
 
             //console.log(elementos[i].tag); //pegando o elemento dentro do objeto
-            let { tag, texto } = elementos[i] //atribuição desestruturando 
+            let { tag, texto } = elementos[i] //atribuição via desestruturação
             let novoElement = document.createElement(tag);
             endHTML.appendChild(novoElement);
-            novoElement.innerHTML = texto;
+            novoElement.innerText = texto;
 
             console.log(tag, texto); // para testar o console do windows
-
         }
     </script>
 </body>
