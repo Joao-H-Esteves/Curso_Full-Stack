@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+        :root{
+    --primary_color:rgb(86, 140, 190);
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary_color);
+    font-size: 20px;
+}
+.container{
+    padding: 20px;
+    background: white;
+    max-width: 640px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+    </style>
+    <title>Exercicio NodeList</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1> Alterar as propriedades CSS usando o JavaScript </h1>
+        <div class="paragrafos">
+            <p>Para tal, iremos usar o "FOR OF" para fazer os paragrafos apresentarem a estrutura de um ARRAY </p>
+            <p> Vai percorre-los e alterar seu background e a cor das letras </p>
+            <p>Para acessar o Estilo , iremos utilizar a função "getComputedStyle(document.sessãoDoHTML)" </p>
+            <p>Com isso as propriedades serão alteradas , porem só sera possivel testar no console do Windows, no devTools.</p>
+        </div>
+
+    </section>
+
+
+
+    <script >
+        const paragf = document.querySelector('.paragrafos');
+
+        const NODELIST = paragf.querySelectorAll('p');
+
+        const estiloBody = getComputedStyle(document.body)
+        // getComputedStyle TEM "TODOS" OS ESTILOS CONFIGURADOS NO CSS DO DOCUMENTO.
+        const fundoDoBody = estiloBody.backgroundColor;
+
+        console.log(fundoDoBody);// verificando a cor => rgb(86, 140, 190)
+
+        for (let p of NODELIST) {
+            console.log(p);
+            p.style.backgroundColor = fundoDoBody;
+            p.style.color = 'white';
+
+        }
+
+    </script>
+</body>
+
+</html>
