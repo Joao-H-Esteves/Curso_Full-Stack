@@ -5,11 +5,20 @@
  (LARG > ALT).
  */
 
- const ALT = 100;
- const LARG = 200;
+ let ALT = 1000; //altura da imagem
+ let LARG = 200; //largura da imagem
 
  function ePaisagem(ALT , LARG) {
      return LARG > ALT ? true : false;     
- };
+ }; 
 
- console.log(ePaisagem(ALT , LARG));
+ console.log(ePaisagem(ALT , LARG));// false
+
+ //============================================
+
+ //cod do professor:
+
+ //ARROW FUNCTIOn
+ 
+ const Epaisagem = (ALT , LARG) => LARG > ALT ;
+ console.log(Epaisagem(1200 , 1920)); //true
