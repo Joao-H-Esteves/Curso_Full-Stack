@@ -1,0 +1,76 @@
+<!-- 
+    EXERCICIO escreva uma função que receba 2 numero e retorne o maior deles -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15</title>
+    <style>
+        :root{
+    --primary_color:rgb(41, 59, 75);
+}
+*{
+    box-sizing: border-box;
+    outline: 0;
+    color: var(--primary_color);
+    }
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary_color);
+    font-size: 20px;
+}
+.container{
+    padding: 20px;
+    background: white;
+    max-width: 640px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <section class="balao">
+        <h1 > Escreva uma função que receba 2 numero e retorne o maior deles </h1>
+
+        <!-- o paragrafo será criado aqui -->
+    </section>
+
+
+
+    <script>
+
+        const mostraNoHtml = document.querySelector('section');
+         const paragrafo = document.createElement('p');
+         mostraNoHtml.appendChild(paragrafo);
+         paragrafo.innerHTML = 'teste';
+
+        window.alert ('Digite dois numero e a função mostrará qual o maior deles');
+
+        const num1 = window.prompt ('Digite o primeiro numero: ');
+        
+        const num2 = window.prompt ('Digite o segundo numero numero: ');
+       
+        function oMaiorNum(a , b) {
+        
+            if (a > b){
+                return (`O maior numero é ${a}`);
+            }else{
+                return (`O maior numero é ${b}`);
+            }       
+        };
+        
+        let chamaNumero = oMaiorNum ( num1, num2);
+        
+        paragrafo.innerHtml +=  chamaNumero;
+        window.alert( chamaNumero);
+        console.log( chamaNumero);
+    </script>
+</body>
+
+</html>
