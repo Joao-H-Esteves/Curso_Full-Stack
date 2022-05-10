@@ -8,22 +8,22 @@
  * USAR FUNÇÃO PARA NUM DE 0 A 100 
  */
 
-//let num = 13 //variavel de controle
+//let num = 15 //variavel de controle
 
 function isNumber(num) {
     if (typeof num === 'number') return (FizzBuzz(num));
 
-    else return (console.log(`numero "${num}"  invalido, tente novamente`));
+     return (console.log(`numero "${num}"  invalido, tente novamente`));
 };
 function FizzBuzz(num) {
     
     if (num %3 === 0 && num %5 === 0) return ('## Numero FizzBuzz');        
     
-    else if (num %3 === 0) return ('# Numero Fizz');
+    if (num %3 === 0) return ('# Numero Fizz');
     
-    else if(num %5 === 0) return ('# Numero Buzz');
+    if(num %5 === 0) return ('# Numero Buzz');
 
-    else  return (' não passa no teste');
+        return (' não passa no teste');
 };
 
 for (let index = 0; index <= 100; index++) {
