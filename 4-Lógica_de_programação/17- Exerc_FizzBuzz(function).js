@@ -26,6 +26,7 @@ function FizzBuzz(num) {
         return (' não passa no teste');
 };
 
+console.log(isNumber("a"));
 for (let index = 0; index <= 100; index++) {
     
     console.log(index, isNumber(index));
