@@ -55,3 +55,6 @@ function formataData(novaData) {
 const novaData = new Date(); // variavel criada para ser o paramentro da função
  const dataBrasil = formataData(novaData) //variavel criada para chamar a função
  console.log(dataBrasil) // chamada da variavel com função
+
+
+ //AULA 19 POSSUI MAIS EXEMPLOS DE FUNÇÕES COM HORAS
