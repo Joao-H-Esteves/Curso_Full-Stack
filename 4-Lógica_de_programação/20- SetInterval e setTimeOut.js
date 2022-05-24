@@ -9,7 +9,6 @@ function mostraHora() {
     return data.toLocaleTimeString('pr-BR',{hour12: false});
 }
 
-//Usando uma segunda função para chamar a primeira
 /* 
 function funcaoDoInterval() {
     console.log(mostraHora());
@@ -23,6 +22,12 @@ setInterval(funcaoDoInterval, 1000);
 
 //usando função anonima
 
-setInterval( function (){
+const timer = setInterval( function (){
     console.log(mostraHora());
 }, 1000);
+// pode ser usada com ou sem variavel
+
+setTimeout(function(){
+    clearInterval (timer);
+},10000);
+// fazendo o interval parar
