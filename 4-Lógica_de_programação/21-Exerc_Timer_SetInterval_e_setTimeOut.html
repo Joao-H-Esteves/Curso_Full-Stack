@@ -50,9 +50,10 @@
             <p class="relogio"> 00:00:00 </p> 
         </div>      
 
-        <button id="inicio" type="submit" onclick="iniciarContagem()"> Iniciar</button>
-        <button id="pausa" type="submit" onclick="pararContagem()"> Pausar</button>
-        <button id="zerar" type="submit" onclick="zerarTimer()"> Zerar</button>
+        <button class="iniciar" > Iniciar</button>
+        <button class="pausar" > Pausar</button>
+        <button class="zerar" > Zerar</button>
+        
 
     </section>
 
@@ -60,24 +61,55 @@
 
     <script >
         let relogio = document.querySelector('.relogio');
+        let iniciar = document.querySelector('.iniciar');
+        let pausar = document.querySelector('.pausar');
+        let zerar = document.querySelector('.zerar');
+        //fazer as funções atualizarem as variaveis globais:
+        let segundos = 0;
+        let timer;
 
-        function iniciarContagem() {
-            // alert('Iniciou');
+        function contadorSegundos() {
+            let data = new Date(segundos*1000);
+            return data.toLocaleTimeString('pt-BR', {
+                hour12:false,
+                timeZone: 'UTC' // para zerar o horario
+            })
+        }
+
+        function iniciaRelogio() {
+            //para atualizar as var globais é só colocar o nome sem "let":
+             timer = setInterval( function (){
+            segundos ++;
+            relogio.innerHTML = contadorSegundos(segundos);
+         }, 1000);
+        }
+
+        // CAPTURAR O EVENTO DIRETO PELO JS
+        iniciar.addEventListener('click',function (params) {
+            // alert ("TESTE");
+            clearInterval(timer); // para evitar duas ativações simultaneas e bugar o contador
+            iniciaRelogio();
             relogio.style.color= "black";
             relogio.style.fontWeight = "400";
-        }
 
-        function pararContagem() {
-            // alert('pausou');
+        });
+
+        pausar.addEventListener('click',function (params) {
+            // alert ('PAUSE');
+            clearInterval(timer); // o evento para de onde estava
+
             relogio.style.color= "red";
             relogio.style.fontWeight = "800";
-        }
+            
+        });
 
-        function zerarTimer() {
-            // alert('zerou');
-            relogio.style.color= "red";
+        zerar.addEventListener('click', function (params) {
+            clearInterval(timer);
+            segundos = 0;
+            relogio.innerHTML ='00:00:00'
+            relogio.style.color= "blue";
             relogio.style.fontWeight = "400";
-        }
+        })
 
 
     </script>
