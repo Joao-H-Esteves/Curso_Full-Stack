@@ -29,5 +29,9 @@ const timer = setInterval( function (){
 
 setTimeout(function(){
     clearInterval (timer);
-},10000);
+},5000);
 // fazendo o interval parar
+
+setTimeout (function(){
+    console.log('Vou para o contador automaticamente');
+},6000);
