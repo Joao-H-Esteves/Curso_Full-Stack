@@ -1,0 +1,36 @@
+:root{
+    --primary_color:rgb(86, 140, 190);
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+    
+}
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,47,1) 35%, rgba(0,212,255,1) 72%, rgba(196,0,255,1) 100%);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.container{
+    padding: 20px;
+    background: white;
+    max-width: 80vw;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+form input, form label, form button{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+#botao{
+    width: 100px;
+}
+form input :focus{
+    outline: ipx solid var(--primary_color);
+}
