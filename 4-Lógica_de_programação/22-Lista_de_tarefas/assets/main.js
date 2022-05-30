@@ -24,11 +24,24 @@ function criaBotaoApagar(li){
     li.innerText += ' ';
       let button = document.createElement('button');
       button.setAttribute('type', 'button');
-      button.classList.add('botao-apagar');
+      //button.classList.add('botao-apagar');//podia ser feito assim, porem vamos fazer dessa forma: 'setAttribute
+      button.setAttribute('class', 'apagar');
+      button.setAttribute('title','Apagar essa tarefa?'); //ao passa o mouse aparece a mensagem
       button.innerText = 'Apagar';
       li.appendChild(button);
 
 }
+
+document.addEventListener('click', function (event) {
+    // mostra onde esta clicando no html
+    const elemento = event.target;
+    //console.log(elemento); //teste
+    if (elemento.classList.contains('apagar')) {
+        // se o botão com a class apagar for clicado:
+        
+    }
+})
+
 inputNovaTarefa.addEventListener('keypress', function(e) {
      //capturando evento de teclas digitadas
      console.log(e); // testando o evento e descobrindo o num da tecla
