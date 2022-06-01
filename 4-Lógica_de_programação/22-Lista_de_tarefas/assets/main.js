@@ -42,6 +42,7 @@ document.addEventListener('click', function (event) {
         console.log('BOTAO APAGAR CLICADO');
         console.log(elemento.parentElement);// mostrando o pai do elemento
         elemento.parentElement.remove(); // apagando o elemento
+        salvarTarefa(); //PARA SALVA QUANDO APAGAR UMA TAREFA
     }
 })
 
@@ -64,7 +65,8 @@ function criaTarefa(textoCapturado) {
     console.log(textoCapturado);
     apagaInputPrincipal();
     criaBotaoApagar(li);
-}
+    salvarTarefa(); // SALVA A TAREFA AO CRIAR UMA NOVA
+};
 
 btnAdiciona.addEventListener('click', function (params) {
     //capturando o click no button "adicionar tarefas"
@@ -76,3 +78,39 @@ btnAdiciona.addEventListener('click', function (params) {
     criaTarefa(inputNovaTarefa.value);
 });
 
+function salvarTarefa(){
+    const liTarefas = caixaLi.querySelectorAll('li') ;
+    console.log(liTarefas); // mostra a Vcaptura da li
+    const nomesTarefas = [];
+    for (let tarefa of liTarefas) {
+        let textoLi = tarefa.innerText;
+        textoLi = textoLi.replace('Apagar','');//REPLACE =corrigindo um bug, pois aparecia a palavra apagar junto do texto
+
+        //console.log(textoLi);TESTE
+        nomesTarefas.push (textoLi); // jogando o texto dentro do array       
+    }
+     console.log(nomesTarefas);//mostra os elementos do array
+
+     //1-CONVERTENDO UM ARRAY EM  UMA STRING EM E TRANSFORMANDO EM ARQUIVO JSON PARA PODER SALVAR ELE:
+     const tarefasJSON = JSON.stringify(nomesTarefas);
+     //ARRAY para STRING
+     console.log(tarefasJSON);
+
+     //2- SALVANDO O ARQUIVO (SÓ SALVA STRING)
+     localStorage.setItem('tarefaSAVE', tarefasJSON);
+};
+
+//3- ADICIONANDO (RECARREGANDO) O ARQUIVO SALVO:
+    function adicionaJSONsalvo() {
+        const tarefa = localStorage.getItem('tarefaSAVE');
+// 4 - FAZENDO O JSON STRING VIRAR UM ARRAY NOVAMENTE:
+        const nomesTarefas = JSON.parse(tarefa);
+        console.log(tarefa);
+ 
+//5 - FAZENDO ESSE ARRAY RETORNAR PARA O HTML
+        for (let tarefa of nomesTarefas) {
+            criaTarefa(tarefa);
+        }
+} 
+
+adicionaJSONsalvo()
