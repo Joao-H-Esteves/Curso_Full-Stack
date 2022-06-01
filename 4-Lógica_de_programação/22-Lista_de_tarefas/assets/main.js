@@ -32,19 +32,22 @@ function criaBotaoApagar(li){
 
 }
 
+//FAZER O BOTÃO APAGAR , DELETAR A LI CRIADA:
 document.addEventListener('click', function (event) {
     // mostra onde esta clicando no html
     const elemento = event.target;
     //console.log(elemento); //teste
     if (elemento.classList.contains('apagar')) {
         // se o botão com a class apagar for clicado:
-        
+        console.log('BOTAO APAGAR CLICADO');
+        console.log(elemento.parentElement);// mostrando o pai do elemento
+        elemento.parentElement.remove(); // apagando o elemento
     }
 })
 
 inputNovaTarefa.addEventListener('keypress', function(e) {
      //capturando evento de teclas digitadas
-     console.log(e); // testando o evento e descobrindo o num da tecla
+     //console.log(e); // testando o evento e descobrindo o num da tecla
     if (e.keyCode === 13/* codigo do botão enter */) {
 
      if (!inputNovaTarefa.value) return;
@@ -71,5 +74,5 @@ btnAdiciona.addEventListener('click', function (params) {
     //evitar que crie li's vazias com um if simples 
     
     criaTarefa(inputNovaTarefa.value);
-})
+});
 
