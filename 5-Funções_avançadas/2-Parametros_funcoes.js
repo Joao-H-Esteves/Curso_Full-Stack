@@ -6,7 +6,7 @@ function funcao() {
     console.log(arguments[4]);
     //pode acessar as keys dos argumentos
 };
-funcao('valor', 1, 2, 3, 8, 55, 100);
+funcao('valor', 1, 2, 3, 8, 55, 100); // valor dos aguments
 
 // SOMANDO AS KEYS :
 

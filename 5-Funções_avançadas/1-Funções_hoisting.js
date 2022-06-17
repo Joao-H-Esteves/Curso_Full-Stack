@@ -3,7 +3,7 @@
 // hoisting = eleva as declarações e variaveis globais com 'VAR" para o topo do programa
 
 
-olaMundo();
+olaMundo(); // Executando uma função declarada posteriormente
 
 
 //por isso podemos chama r a função anntes mesmo de declarar ela
