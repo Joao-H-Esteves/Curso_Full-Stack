@@ -21,7 +21,12 @@ console.log(Math.max(1,3,34354,34,23,-4,55,343,234234,2322,2222,087)); // buscar
 console.log(Math.min(1,3,34354,34,23,-4,55,343,234234,2322,2222,087)); // buscar o menor numero
 
 console.log(Math.random()); // numeros aleatorios entre 0 e 1 (0.3289711398973414)
-console.log(Math.random() * (10-5)+5); // float de 10 a 5 (9.39453998301474)
-console.log(Math.round(Math.random() * (100-1) +1)); // misturando as funções para aparecer int de 1 a 100
+console.log(Math.random() * (10 - 5) + 5); // float de 10 a 5 (9.39453998301474)
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+console.log(Math.round(Math.random() * (100 - 1) + 1)); // misturando as funções para aparecer int de 1 a 100
+
+//FORMULA PARA NUMEROS RANDOMICOS => Math.random() * (max - mni) + min;
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
  
