@@ -1,0 +1,59 @@
+:root{
+    --primary_color:rgba(35, 129, 217, 0.89);
+    --button_color : rgba(169, 160, 160, 0.836);
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary_color);
+    font-size: 20px;
+}
+.container{
+    padding: 20px;
+    background: white;
+    max-width: 600px;
+    margin: 20vh auto;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px grey;
+}
+.result , .center, .grid{
+    margin: 0px auto;
+}
+.header{
+    text-align: center;
+}
+.result{
+    width: 450px;
+    margin: 15px auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 8px;
+    width: 80%;
+   
+}
+button{
+    width: 100px;
+    padding: 10px 10px;
+    margin: 4px;
+    border-radius: 4px;
+    font-size: 22px;
+    font-weight: 700;
+    background: var(--button_color);
+}
+button :focus{
+    background-color: brown;
+}
+h1{
+    font-size: 40px;
+    color: var(--primary_color);
+    text-shadow: 3px 3px 3px var(--button_color);
+}
