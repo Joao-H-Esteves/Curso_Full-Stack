@@ -1,6 +1,7 @@
 :root{
     --primary_color:rgba(35, 129, 217, 0.89);
     --button_color : rgba(169, 160, 160, 0.836);
+    --orange_color: rgb(255, 165, 0);
 }
 
 *{
@@ -16,30 +17,38 @@ body{
     font-size: 20px;
 }
 .container{
+    border-style: groove;
     padding: 20px;
     background: white;
     max-width: 600px;
     margin: 20vh auto;
-    border-radius: 10px;
-    box-shadow: 6px 6px 6px grey;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 30px;
+    box-shadow: -6px -6px 10px 2px grey, inset -20px -2px var(--orange_color);
 }
-.result , .center, .grid{
+.result , .center, .grid, table{
     margin: 0px auto;
 }
 .header{
     text-align: center;
 }
 .result{
-    width: 450px;
+    width: 440px;
     margin: 15px auto;
+    font-size: 32px;
+    font-weight: 700;
+    /* direction: rtl; */
+    letter-spacing: 6px;
+    border-radius: 9px;
 }
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 8px;
     width: 80%;
-   
-}
+   }
 button{
     width: 100px;
     padding: 10px 10px;
@@ -48,12 +57,14 @@ button{
     font-size: 22px;
     font-weight: 700;
     background: var(--button_color);
+    border-style: groove;
+    border-color: var(--orange_color);
 }
 button :focus{
     background-color: brown;
 }
 h1{
     font-size: 40px;
-    color: var(--primary_color);
-    text-shadow: 3px 3px 3px var(--button_color);
+    color: var(--orange_color);
+    text-shadow: -3px -3px 10px  var(--button_color);
 }

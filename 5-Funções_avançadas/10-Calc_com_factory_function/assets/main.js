@@ -4,6 +4,7 @@ const botoes = document.getElementsByClassName('btnGeneric');
 
 
 
-let captura = addEventListener('click', function () {
-    
+let captura = document.addEventListener('click', function (event) {
+    let apertou = event.target;
+    console.log(apertou);
 })
