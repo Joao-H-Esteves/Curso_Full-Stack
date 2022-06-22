@@ -1,6 +1,7 @@
 :root {
     --primary_color: rgba(48, 99, 147, 0.89);
     --button_color: rgba(169, 160, 160, 0.836);
+    --button_numer_color:  rgb(224, 219, 219);
     --orange_color: rgb(255, 165, 0);
     --container_color: rgb(246, 242, 242);
 }
@@ -80,12 +81,19 @@ button {
     font-size: 2.6rem;
     font-weight: 700;
     background: var(--button_color);
+    cursor: pointer;     /* dedinho */
 }
-
+.btn-num, .btn-igual{
+    background: var(--button_numer_color);
+    border-width: 0.4rem;
+}
 .btnGeneric:hover {
     background-color: var(--orange_color);
     color: var(--container_color);
     border-color: var(--button_color);
+}
+.btn-igual:hover, .btn-clear:hover{
+    background: brown;
 }
 
 h1 {
