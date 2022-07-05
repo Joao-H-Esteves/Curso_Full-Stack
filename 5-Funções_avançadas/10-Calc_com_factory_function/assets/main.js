@@ -3,7 +3,7 @@
 const calculadora = criaCalculadora();
 calculadora.inicia();
 
-//factory function:
+//factory function: (função fabrica)
 
 function criaCalculadora() {
 
@@ -18,15 +18,16 @@ function criaCalculadora() {
             document.addEventListener('click', function (event) {
                 const apertou = event.target;
                 console.log(apertou);
+
                 if (apertou.classList.contains('btnGeneric')) {
                     console.log('apertou o botão');
-                    this.comandoParaTotal(); // caixa de reusltado
+                    this.comandoParaTotal(apertou.innerText); // caixa de resultado
                 };
                 
-            })
+            }.bind(this));//para corrigir o bug do this, pois estava apontanda para o document e o correto era o clicarBotoes()
         },
-        comandoParaTotal() { // caixa de resultado
-             console.log('teste');
+        comandoParaTotal(valor) { // caixa de resultado
+            this.result.value += valor;
         }
 
 
