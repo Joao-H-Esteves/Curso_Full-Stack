@@ -73,7 +73,7 @@ button {
     border: 3px solid var(--orange_color);
 }
 
-.btnGeneric {
+.btnGeneric , .btnfunc {
     width: 10rem;
     padding: 1rem 1rem;
     margin: 0.4rem;
@@ -83,7 +83,7 @@ button {
     background: var(--button_color);
     cursor: pointer;     /* dedinho */
 }
-.btn-num, .btn-igual{
+.btnNum, .btnIgual{
     background: var(--button_numer_color);
     border-width: 0.4rem;
 }
@@ -92,7 +92,7 @@ button {
     color: var(--container_color);
     border-color: var(--button_color);
 }
-.btn-igual:hover, .btn-clear:hover{
+.btnIgual:hover, .btnClear:hover{
     background: brown;
 }
 
