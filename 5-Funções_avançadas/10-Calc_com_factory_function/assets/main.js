@@ -49,7 +49,12 @@ function criaCalculadora() {
         },
         
         pressionaEnter(){
-            
+            this.result.addEventListener('keyup', e=> { //keyup = soltar a tecla
+                
+                if (e.keyCode === 13) {
+                    this.realizaConta();
+                }
+            });
         },
 
         clicarBotoes() {
